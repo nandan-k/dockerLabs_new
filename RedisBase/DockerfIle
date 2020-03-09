@@ -1,0 +1,10 @@
+#base
+from alpine
+
+
+#dependencies
+run apk add --update redis
+
+
+#run
+cmd ["redis-server"]
