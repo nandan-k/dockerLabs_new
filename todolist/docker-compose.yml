@@ -1,0 +1,29 @@
+version: '3.4'
+
+services:
+  todolistapi:
+    image: todolistapi
+    build:
+      context: ToDoList.API
+      dockerfile: Dockerfile
+    ports:
+      - 5001:80
+    networks: 
+      - todolistnetwork
+
+  todolistbll:
+    image: todolistbll
+    environment:
+      - todolistapi=http://todolistapi
+    build:
+      context: ToDoList.BLL
+      dockerfile: Dockerfile
+    ports:
+      - 5002:80
+    depends_on: 
+      - todolistapi
+    networks: 
+      - todolistnetwork
+networks: 
+  todolistnetwork:
+    driver: bridge
