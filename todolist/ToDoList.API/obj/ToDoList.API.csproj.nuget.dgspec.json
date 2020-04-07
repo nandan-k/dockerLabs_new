@@ -1,31 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kannan.nandan\\Documents\\Technology\\Dockers\\todolist\\ToDoList.API\\ToDoList.API.csproj": {}
+    "C:\\Docker labs\\todolist\\ToDoList.API\\ToDoList.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kannan.nandan\\Documents\\Technology\\Dockers\\todolist\\ToDoList.API\\ToDoList.API.csproj": {
+    "C:\\Docker labs\\todolist\\ToDoList.API\\ToDoList.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kannan.nandan\\Documents\\Technology\\Dockers\\todolist\\ToDoList.API\\ToDoList.API.csproj",
+        "projectUniqueName": "C:\\Docker labs\\todolist\\ToDoList.API\\ToDoList.API.csproj",
         "projectName": "ToDoList.API",
-        "projectPath": "C:\\Users\\kannan.nandan\\Documents\\Technology\\Dockers\\todolist\\ToDoList.API\\ToDoList.API.csproj",
-        "packagesPath": "C:\\Users\\kannan.nandan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kannan.nandan\\Documents\\Technology\\Dockers\\todolist\\ToDoList.API\\obj\\",
+        "projectPath": "C:\\Docker labs\\todolist\\ToDoList.API\\ToDoList.API.csproj",
+        "packagesPath": "C:\\Users\\nandan\\.nuget\\packages\\",
+        "outputPath": "C:\\Docker labs\\todolist\\ToDoList.API\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\kannan.nandan\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\nandan\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://www.nuget.org/api/v2": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
@@ -40,6 +35,22 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.sqlserver": {
+              "target": "Package",
+              "version": "[*, )"
+            },
+            "Microsoft.EntityFrameworkCore.tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -58,7 +69,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
         }
       }
     }
