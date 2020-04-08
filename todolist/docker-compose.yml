@@ -8,6 +8,8 @@ services:
       dockerfile: Dockerfile
     ports:
       - 5001:80
+    environment:
+      - ConnectionString__DefaultConnection=Server=db;database=Sample;User Id=sa;Password=Password@123
     depends_on: 
       - db
     networks: 
@@ -27,7 +29,6 @@ services:
       - todolistnetwork
   db:
     image: "mcr.microsoft.com/mssql/server"
-    hostname: "sql"
     environment:
       SA_PASSWORD: "Password@123"
       ACCEPT_EULA: "Y"
@@ -35,6 +36,8 @@ services:
       - "1433:1433"
     expose:
       - 1433
+    networks: 
+      - todolistnetwork
     volumes:  
       - mssqlsystem:/var/opt/mssql3/
       - mssqluser:/var/opt/sqlserver

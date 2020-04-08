@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "+svpZukrLuJpUIdEENFCxew/3fsQ7vcoKgMzmaRUmfOPPJxKy1Yompg7g02slw8tQLL03WrvqNjDZU/6n4oAvg==",
+  "dgSpecHash": "oyeYFFUc4fjUrza7irluckgj28377r8Ufu7mCa29YHuMRE1lAdDR0Fxt548PoF+p3BYSQwwlao1eh8KN3uTLNg==",
   "success": true,
   "projectFilePath": "C:\\Docker labs\\todolist\\ToDoList.API\\ToDoList.API.csproj",
   "expectedPackageFiles": [
