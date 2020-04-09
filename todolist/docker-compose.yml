@@ -2,7 +2,7 @@ version: '3.4'
 
 services:
   todolistapi:
-    image: todolistapi
+    image: nandank81/todolistapi
     build:
       context: ToDoList.API
       dockerfile: Dockerfile
@@ -15,7 +15,7 @@ services:
     networks: 
       - todolistnetwork
   todolistbll:
-    image: todolistbll
+    image: nandank81/todolistbll
     environment:
       - todolistapi=http://todolistapi
     build:
