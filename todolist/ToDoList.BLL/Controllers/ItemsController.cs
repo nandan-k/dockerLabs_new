@@ -24,9 +24,16 @@ namespace ToDoList.BLL.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<string> Get()
+        public async Task<string> Get()
         {
-           return Summaries.ToList();
+            using (var client = new System.Net.Http.HttpClient())
+            {
+                // Call *mywebapi*, and display its response in the page
+                var request = new System.Net.Http.HttpRequestMessage();
+                request.RequestUri = new Uri("http://todolistapi/api/product"); 
+                 var response = await client.SendAsync(request);
+                return await response.Content.ReadAsStringAsync();
+            }
         }
 
       
