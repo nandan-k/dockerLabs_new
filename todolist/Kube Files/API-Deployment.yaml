@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: API-Deployment
+  name: api-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      component: ToDoListAPI-Pod
+      component: todolistapi-pod
   template:
     metadata:
       labels:
-        component: ToDoListAPI-Pod
+        component: todolistapi-pod
     spec:
       containers:
-      - name: ToDoListAPI
+      - name: todolistapi
         image: nandank81/todolistapi
         resources:
           limits:
