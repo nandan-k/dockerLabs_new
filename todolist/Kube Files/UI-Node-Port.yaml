@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: todolistapi-node-port
+  name: todolistui-node-port
 spec:
   type: NodePort
   ports:
-  - port: 5001
+  - port: 5003
     targetPort: 80
-    nodePort: 31515
+    nodePort: 31517
   selector:
-    component: todolistapi-pod
+    component: todolistui-pod

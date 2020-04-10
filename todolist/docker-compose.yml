@@ -27,6 +27,19 @@ services:
       - todolistapi
     networks: 
       - todolistnetwork
+  todolistui:
+    image: nandank81/todolistui
+    environment:
+      - todolistbll=http://todolistbll
+    build:
+      context: todolistui
+      dockerfile: Dockerfile
+    ports:
+      - 5003:80
+    depends_on: 
+      - todolistbll
+    networks: 
+      - todolistnetwork
   db:
     image: "mcr.microsoft.com/mssql/server"
     environment:
