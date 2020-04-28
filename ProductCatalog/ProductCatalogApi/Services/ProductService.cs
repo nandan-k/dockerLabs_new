@@ -14,11 +14,11 @@ using Microsoft.Extensions.Logging;
 
 using System.Linq;
 using ProductCatalogApi.Data;
-
+using ProductCatalogApi.Interfaces;
 
 namespace ProductCatalogApi.Services
 {
-    public class ProductService 
+    public class ProductService  : IProductService
     {
 
          private List<ProductCatalogApi.Models.Product> _products;

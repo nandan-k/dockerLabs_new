@@ -13,7 +13,9 @@ using Microsoft.Extensions.Logging;
 
 using Microsoft.EntityFrameworkCore;
 using ProductCatalogApi.Data;
+using ProductCatalogApi.Interfaces;
 using ProductCatalogApi.Services;
+
 
 namespace ProductCatalogApi
 {
@@ -35,7 +37,7 @@ namespace ProductCatalogApi
                 services.AddDbContext<ProductCatalogApi.Data.ProductCatalogContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
-               services.AddTransient<ProductService,ProductService>();
+               services.AddTransient<IProductService,ProductService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

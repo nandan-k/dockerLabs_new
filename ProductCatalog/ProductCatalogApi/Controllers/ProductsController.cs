@@ -6,17 +6,18 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using ProductCatalogApi.Services;
 using ProductCatalogApi.Models   ;
+using ProductCatalogApi.Interfaces;
 
 namespace ProductCatalogApi.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class ProductController : ControllerBase
+    public class ProductsController : ControllerBase
     {
       
-        private readonly ILogger<ProductController> _logger;
-        private ProductService _ProductService;
-        public ProductController(ILogger<ProductController> logger,ProductService productService)
+        private readonly ILogger<ProductsController> _logger;
+        private IProductService _ProductService;
+        public ProductsController(ILogger<ProductsController> logger,IProductService productService)
         {
             _logger = logger;
             _ProductService = productService;
