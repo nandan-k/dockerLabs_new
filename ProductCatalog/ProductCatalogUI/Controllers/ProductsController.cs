@@ -27,7 +27,7 @@ namespace ProductCatalogUI.Controllers
             {
                 // Call *mywebapi*, and display its response in the page
                 var request = new System.Net.Http.HttpRequestMessage();
-                request.RequestUri = new Uri("http://productcatalogapi/api/product"); 
+                request.RequestUri = new Uri("http://productcatalogapi/api/products"); 
                  var response = await client.SendAsync(request);
                 return await response.Content.ReadAsStringAsync();
             }
