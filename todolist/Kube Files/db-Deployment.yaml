@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: db
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      component: db
+  template:
+    metadata:
+      labels:
+        component: db
+    spec:
+      containers:
+      - name: db
+        image: mcr.microsoft.com/mssql/server
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 1433
+        env:
+          - name: SA_PASSWORD
+            value: "Password@123"
+          - name: ACCEPT_EULA 
+            value: "Y"

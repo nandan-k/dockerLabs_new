@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: todolistbll
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      component: todolistbll
+  template:
+    metadata:
+      labels:
+        component: todolistbll
+    spec:
+      containers:
+      - name: todolistbll
+        image: nandank81/todolistbll
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 80

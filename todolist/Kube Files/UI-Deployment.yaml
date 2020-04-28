@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ui-deployment
+  name: todolistui
 spec:
   replicas: 1
   selector:
     matchLabels:
-      component: todolistui-pod
+      component: todolistui
   template:
     metadata:
       labels:
-        component: todolistui-pod
+        component: todolistui
     spec:
       containers:
       - name: todolistui
@@ -20,4 +20,4 @@ spec:
             memory: "128Mi"
             cpu: "500m"
         ports:
-        - containerPort: 5003
+        - containerPort: 80

@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: todolistapi
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      component: todolistapi
+  template:
+    metadata:
+      labels:
+        component: todolistapi
+    spec:
+      containers:
+      - name: todolistapi
+        image: nandank81/todolistapi
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 80
+        env:
+          - name: "ConnectionString__DefaultConnection"
+            value: "Server=db;database=Sample;User Id=sa;Password=Password@123"
+

@@ -1,0 +1,5 @@
+C:\Docker labs\ProductCatalog\ProductCatalogApi\obj\Debug\netcoreapp3.1\ProductCatalogApi.csprojAssemblyReference.cache
+C:\Docker labs\ProductCatalog\ProductCatalogApi\obj\Debug\netcoreapp3.1\ProductCatalogApi.csproj.CoreCompileInputs.cache
+C:\Docker labs\ProductCatalog\ProductCatalogApi\obj\Debug\netcoreapp3.1\ProductCatalogApi.MvcApplicationPartsAssemblyInfo.cache
+C:\Docker labs\ProductCatalog\ProductCatalogApi\obj\Debug\netcoreapp3.1\ProductCatalogApi.AssemblyInfoInputs.cache
+C:\Docker labs\ProductCatalog\ProductCatalogApi\obj\Debug\netcoreapp3.1\ProductCatalogApi.AssemblyInfo.cs
