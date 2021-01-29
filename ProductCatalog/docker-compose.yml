@@ -30,12 +30,13 @@ services:
   db:
     image: "mcr.microsoft.com/mssql/server"
     environment:
-      SA_PASSWORD: "Password@123"
+      MSSQL_SA_PASSWORD: "Password@123"
       ACCEPT_EULA: "Y"
     ports:
-      - "1433:1433"
+      - "1533:1433"
     expose:
       - 1433
+      - 1533
     networks: 
       - catalognetwork
     volumes:  
