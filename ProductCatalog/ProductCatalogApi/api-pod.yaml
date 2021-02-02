@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+    name: productcatalogapi-pod
+    labels:
+        component: api
+spec:
+  containers:
+    - name: productcatalogapi
+      image: nandank81/productcatalogapi
+      ports:
+        - containerPort: 80

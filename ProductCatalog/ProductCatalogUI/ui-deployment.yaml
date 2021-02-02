@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: productcatalogui
+spec:
+    replicas: 1
+    selector:
+        matchLabels:
+            component: productcatalogui
+    template:
+        metadata:
+            labels:
+                component: productcatalogui   
+        spec:
+            containers:
+                - name: productcatalogui
+                  image: nandank81/productcatalogui
+                  ports:
+                    - containerPort: 80
