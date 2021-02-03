@@ -1,0 +1,26 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: productcatalog-ingress
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/use-regex: 'true'
+    nginx.ingress.kubernetes.io/rewrite-target: /$1
+  labels:
+      name: productcatalog-ingress
+spec:
+  rules:
+    - http:
+        paths:
+          - backend:
+              serviceName: ui-cluster-ip-service
+              servicePort: 5002
+            path: /ui/?(.*)
+          - backend:
+              serviceName: api-cluster-ip-service
+              servicePort: 5001
+            path: /backend/?(.*)
+              
+            
+      
+

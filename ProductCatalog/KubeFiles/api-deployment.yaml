@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: productcatalogapi
+spec:
+    replicas: 1
+    selector:
+        matchLabels:
+            component: api
+    template:
+        metadata:
+            labels:
+                component: api   
+        spec:
+            containers:
+                - name: productcatalogapi
+                  image: nandank81/productcatalogapi
+                  env:
+                    - name: ConnectionString__DefaultConnection
+                      value: 'Server=db;database=ProductCatalog;User Id=sa;Password=Password@123'
+                  ports:
+                    - containerPort: 80

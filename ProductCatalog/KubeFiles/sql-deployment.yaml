@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: productcatalogdb
+spec:
+    replicas: 1
+    selector:
+        matchLabels:
+            component: db
+    template:
+        metadata:
+            labels:
+                component: db   
+        spec:
+            containers:
+                - name: productcatalogdb
+                  image: mcr.microsoft.com/mssql/server
+                  env:
+                    - name: MSSQL_SA_PASSWORD
+                      value: Password@123
+                    - name: ACCEPT_EULA
+                      value: "Y" 
+                  ports:
+                    - containerPort: 1433
